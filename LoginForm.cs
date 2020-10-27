@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -110,6 +111,20 @@ namespace example
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
             lol = new Point(e.X, e.Y);
+        }
+
+        private void butLog_Click(object sender, EventArgs e)
+        {
+            String LoginUser = LoginField.Text;
+            String PassUser = Password.Text;
+
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE 'login' = LoginUser 'password' = PassUser");
         }
     }
 }

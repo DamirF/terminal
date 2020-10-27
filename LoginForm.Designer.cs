@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttom1 = new System.Windows.Forms.Button();
+            this.butLog = new System.Windows.Forms.Button();
             this.Password = new System.Windows.Forms.TextBox();
-            this.UserName = new System.Windows.Forms.TextBox();
+            this.LoginField = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,9 +47,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(70)))), ((int)(((byte)(157)))));
-            this.panel1.Controls.Add(this.buttom1);
+            this.panel1.Controls.Add(this.butLog);
             this.panel1.Controls.Add(this.Password);
-            this.panel1.Controls.Add(this.UserName);
+            this.panel1.Controls.Add(this.LoginField);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel2);
@@ -63,24 +63,25 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
-            // buttom1
+            // butLog
             // 
-            this.buttom1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.butLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttom1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(148)))));
-            this.buttom1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttom1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(179)))), ((int)(((byte)(75)))));
-            this.buttom1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(179)))), ((int)(((byte)(75)))));
-            this.buttom1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(139)))), ((int)(((byte)(179)))));
-            this.buttom1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttom1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(178)))));
-            this.buttom1.Location = new System.Drawing.Point(68, 328);
-            this.buttom1.Name = "buttom1";
-            this.buttom1.Size = new System.Drawing.Size(224, 30);
-            this.buttom1.TabIndex = 5;
-            this.buttom1.Text = "Войти";
-            this.buttom1.UseVisualStyleBackColor = false;
+            this.butLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(148)))));
+            this.butLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butLog.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(179)))), ((int)(((byte)(75)))));
+            this.butLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(179)))), ((int)(((byte)(75)))));
+            this.butLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(139)))), ((int)(((byte)(179)))));
+            this.butLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(178)))));
+            this.butLog.Location = new System.Drawing.Point(68, 328);
+            this.butLog.Name = "butLog";
+            this.butLog.Size = new System.Drawing.Size(224, 30);
+            this.butLog.TabIndex = 5;
+            this.butLog.Text = "Войти";
+            this.butLog.UseVisualStyleBackColor = false;
+            this.butLog.Click += new System.EventHandler(this.butLog_Click);
             // 
             // Password
             // 
@@ -93,16 +94,16 @@
             this.Password.UseSystemPasswordChar = true;
             this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
-            // UserName
+            // LoginField
             // 
-            this.UserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(178)))));
-            this.UserName.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserName.Location = new System.Drawing.Point(93, 117);
-            this.UserName.Multiline = true;
-            this.UserName.Name = "UserName";
-            this.UserName.Size = new System.Drawing.Size(248, 73);
-            this.UserName.TabIndex = 3;
-            this.UserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.LoginField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(178)))));
+            this.LoginField.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginField.Location = new System.Drawing.Point(93, 117);
+            this.LoginField.Multiline = true;
+            this.LoginField.Name = "LoginField";
+            this.LoginField.Size = new System.Drawing.Size(248, 73);
+            this.LoginField.TabIndex = 3;
+            this.LoginField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox2
             // 
@@ -196,8 +197,8 @@
         private System.Windows.Forms.Label closebut;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox Password;
-        private System.Windows.Forms.TextBox UserName;
+        private System.Windows.Forms.TextBox LoginField;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button buttom1;
+        private System.Windows.Forms.Button butLog;
     }
 }
