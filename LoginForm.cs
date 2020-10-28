@@ -124,7 +124,17 @@ namespace example
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE 'login' = LoginUser 'password' = PassUser");
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @ul AND `password` = @up", db.getConnection());
+            command.Parameters.Add("@ul", MySqlDbType.VarChar).Value = LoginUser;
+            command.Parameters.Add("@up", MySqlDbType.VarChar).Value = PassUser;
+
+            adapter.SelectCommand = command;
+            adapter.Fill (table);
+
+            if (table.Rows.Count > 0)
+                MessageBox.Show("Yes");
+            else 
+                MessageBox.Show("No");
         }
     }
 }
