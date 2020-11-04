@@ -23,3 +23,4 @@ D:\Projects\example\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\Projects\example\bin\Debug\MySql.Data.xml
 D:\Projects\example\obj\Debug\example.exe.config
 D:\Projects\example\obj\Debug\example.csproj.CopyComplete
+D:\Projects\example\obj\Debug\example.RegForm.resources

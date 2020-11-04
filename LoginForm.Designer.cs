@@ -38,6 +38,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.closebut = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(70)))), ((int)(((byte)(157)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.butLog);
             this.panel1.Controls.Add(this.Password);
             this.panel1.Controls.Add(this.LoginField);
@@ -75,7 +77,7 @@
             this.butLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(139)))), ((int)(((byte)(179)))));
             this.butLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(178)))));
-            this.butLog.Location = new System.Drawing.Point(68, 328);
+            this.butLog.Location = new System.Drawing.Point(61, 327);
             this.butLog.Name = "butLog";
             this.butLog.Size = new System.Drawing.Size(224, 30);
             this.butLog.TabIndex = 5;
@@ -170,6 +172,18 @@
             this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(148)))));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(128)))), ((int)(((byte)(178)))));
+            this.button1.Location = new System.Drawing.Point(105, 379);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Регистрация";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,5 +214,6 @@
         private System.Windows.Forms.TextBox LoginField;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button butLog;
+        private System.Windows.Forms.Button button1;
     }
 }

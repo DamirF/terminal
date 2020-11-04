@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -135,6 +136,13 @@ namespace example
                 MessageBox.Show("Yes");
             else 
                 MessageBox.Show("No");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegForm Reg = new RegForm();
+            Reg.Show();
+            this.Hide();
         }
     }
 }
