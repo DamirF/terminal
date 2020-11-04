@@ -129,7 +129,7 @@ namespace example
             command.Parameters.Add("@up", MySqlDbType.VarChar).Value = PassUser;
 
             adapter.SelectCommand = command;
-            adapter.Fill (table);
+            adapter.Fill(table);
 
             if (table.Rows.Count > 0)
                 MessageBox.Show("Yes");
